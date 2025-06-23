@@ -19,26 +19,25 @@ document.addEventListener('DOMContentLoaded', function () {
     //username validation
     if(username.length < 3) {
         isValid = false;
-        messages.push = ("Username must be at least 3 characters long");
+        messages.push("Username must be at least 3 characters long");
       }
       //email validation
-      if(email.includes("@") || email.includes (".")) {
-        messages.push("Email looks valid");
-      } else{
-        isValid = false;
-        messages.push("Email must include '@' and '.' characters");
+      if (!(email.includes("@") && email.includes("."))) {
+      isValid = false;
+      messages.push("Email must include '@' and '.' characters");
+      
       }
       //password validation
       if(password.length < 8){
         isValid = false;
-        messages.push("password must be at least 8 characters long");
+        messages.push ("password must be at least 8 characters long");
   
       }
 
       feedbackDiv.style.display = "block";
        
       if (isValid){
-        feedbackDiv.textxontent = "Registration successful";
+        feedbackDiv.textcontent = "Registration successful";
         feedbackDiv.style.color = "#28a745";
       }else{
         feedbackDiv.innerHTML = messages.join("<br>");
