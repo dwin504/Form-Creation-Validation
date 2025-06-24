@@ -29,7 +29,7 @@ async function fetchUserData() {
     }catch(error) {
 
         dataContainer.innerHTML = '';
-        dataContainer.textContent = 'failed to load user data.';
+        dataContainer.textContent = 'Failed to load user data.';
         console.error('error fetching user data:',error);
 
     }
