@@ -19,7 +19,7 @@ async function fetchUserData() {
        users.forEach(user => {
         const listItem = document.createElement('li');
         listItem.textContent = user.name;
-        userList.appemdchild(listItem);
+        userList.appemdChild(listItem);
 
        });
       //adding <ul> list
