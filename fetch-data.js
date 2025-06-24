@@ -12,18 +12,19 @@ async function fetchUserData() {
        
        dataContainer.innerHTML = '';
        
-       const userlist = document.createElement('ul');
+       const userList = document.createElement('ul');
     
        //loop through each users and add to list
 
        users.forEach(user => {
         const listItem = document.createElement('li');
         listItem.textContent = user.name;
-        userlist.appemdchild(listItem);
+        userList.appemdchild(listItem);
 
        });
       //adding <ul> list
-       dataContainer.appendChild(userlist);
+       
+      dataContainer.appendChild(userList);
 
     }catch(error) {
 
